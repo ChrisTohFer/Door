@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour {
     [EventRef] public string DoorUnlock;
     [EventRef] public string Detected;
     [EventRef] public string GameOver;
+    [EventRef] public string Countdown;
 
 
     private EventInstance introSoundtrack;
@@ -42,12 +43,11 @@ public class AudioManager : MonoBehaviour {
 
             // Need instance for this as footsteps is a looping event
             footsteps = CreateFMODEventInstance(Footsteps);
-            
         }
         else
         {
             Destroy(gameObject);
-        }        
+        }
     }
 
     /// <summary>
@@ -146,6 +146,21 @@ public class AudioManager : MonoBehaviour {
     public void PlayGameOverSound()
     {
         PlayOneShot(GameOver);
+    }
+
+    /// <summary>
+    /// Countdown sound, paramerize with timer when at 3 down.
+    /// </summary>
+    /// <param name="countdownTimerValue"></param>
+    public void PlayCountdownSound(int countdownTimerValue)
+    {
+        if (countdownTimerValue <= 3 && countdownTimerValue >= 0)
+        {
+            var instance = RuntimeManager.CreateInstance(Countdown);
+            instance.setParameterValue("CountdownNumber", countdownTimerValue);
+            instance.start();
+            instance.release();
+        }
     }
 
     private void PlayOneShot(string eventRef)

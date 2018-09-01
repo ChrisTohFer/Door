@@ -59,3 +59,4 @@ MonoBehaviour:
   DoorUnlock: event:/SFX/DoorUnlock
   Detected: event:/SFX/Detected
   GameOver: event:/SFX/GameOver
+  Countdown: event:/SFX/Countdown
