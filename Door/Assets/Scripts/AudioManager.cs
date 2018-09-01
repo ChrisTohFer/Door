@@ -149,9 +149,8 @@ public class AudioManager : MonoBehaviour {
     }
 
     /// <summary>
-    /// Countdown sound, paramerize with timer when at 3 down.
+    /// Countdown sound, counts down from 3
     /// </summary>
-    /// <param name="countdownTimerValue"></param>
     public void PlayCountdownSound(int countdownTimerValue)
     {
         if (countdownTimerValue <= 3 && countdownTimerValue >= 0)
