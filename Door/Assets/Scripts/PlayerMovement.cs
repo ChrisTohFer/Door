@@ -25,6 +25,15 @@ public class PlayerMovement : MonoBehaviour {
         }
         rb.velocity = MaxSpeed * new Vector3(x, 0f, z);
 
+        if(rb.velocity.magnitude > MaxSpeed * 0.1f)
+        {
+            AudioManager.manager.StartFootsteps();
+        }
+        else
+        {
+            AudioManager.manager.StopFootsteps();
+        }
+
         if (rb.velocity.magnitude > MaxSpeed * 0.05f)
         {
             transform.LookAt(transform.position + rb.velocity);
@@ -40,14 +49,17 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if(other.tag == "RedKey")
         {
+            AudioManager.manager.PlayKeyCollectSound();
             RedKey.gameObject.SetActive(true);
         }
         else if (other.tag == "BlueKey")
         {
+            AudioManager.manager.PlayKeyCollectSound();
             BlueKey.gameObject.SetActive(true);
         }
         else if (other.tag == "GreenKey")
         {
+            AudioManager.manager.PlayKeyCollectSound();
             GreenKey.gameObject.SetActive(true);
         }
     }

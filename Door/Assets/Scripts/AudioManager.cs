@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour {
     public static AudioManager manager;
 
     // Use this for initialization
-    void Start() {
+    void Awake() {
         if(manager == null)
         {
             manager = this;
@@ -42,9 +42,7 @@ public class AudioManager : MonoBehaviour {
 
             // Need instance for this as footsteps is a looping event
             footsteps = CreateFMODEventInstance(Footsteps);
-
-            PlayDetectedSound();
-
+            
         }
         else
         {
@@ -65,30 +63,48 @@ public class AudioManager : MonoBehaviour {
         introSoundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    bool MainSoundtrackPlaying = false;
     /// <summary>
     /// The gameplay background music
     /// </summary>
     public void StartMainSoundtrack()
     {
-        stealthSoundtrack.start();
+        if (!MainSoundtrackPlaying)
+        {
+            stealthSoundtrack.start();
+            MainSoundtrackPlaying = true;
+        }
     }
 
     public void StopMainSoundtrack()
     {
-        stealthSoundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        if (MainSoundtrackPlaying)
+        {
+            stealthSoundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            MainSoundtrackPlaying = false;
+        }
     }
 
+    bool FootstepsPlaying = false;
     /// <summary>
     /// Footsteps have a start and stop method as the sound effect loops
     /// </summary>
     public void StartFootsteps()
     {
-        footsteps.start();
+        if (!FootstepsPlaying)
+        {
+            footsteps.start();
+            FootstepsPlaying = true;
+        }
     }
 
     public void StopFootsteps()
     {
-        footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        if (FootstepsPlaying)
+        {
+            footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            FootstepsPlaying = false;
+        }
     }
 
     /// <summary>

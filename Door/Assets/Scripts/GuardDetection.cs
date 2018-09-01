@@ -39,6 +39,7 @@ public class GuardDetection : MonoBehaviour {
     {
         Debug.Log("Caught");
         GameControl.PlayerCaught = true;
+        GameControl.GC.OnDeath();
         Exclamation.SetActive(true);
     }
 }

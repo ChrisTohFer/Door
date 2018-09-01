@@ -19,6 +19,8 @@ public class BoxControl : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        AnimatorTransitionInfo info = Controller.GetAnimatorTransitionInfo(0);
+        
         if(Input.GetKey(KeyCode.Space) && _timer > 0f && !GameControl.PlayerCaught)
         {
             Controller.SetBool("SpaceDown", true);
