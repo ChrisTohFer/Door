@@ -24,3 +24,5 @@ sysinfo.txt
 FMOD/Door/.*
 
 Door/fmod\.log
+
+Door/fmod_editor\.log
