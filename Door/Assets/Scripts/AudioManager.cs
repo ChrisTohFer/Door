@@ -52,6 +52,9 @@ public class AudioManager : MonoBehaviour {
         }        
     }
 
+    /// <summary>
+    /// The intro soundtrack, to be played before gameplay begins
+    /// </summary>
     public void StartIntroSoundtrack()
     {
         introSoundtrack.start();
@@ -62,6 +65,9 @@ public class AudioManager : MonoBehaviour {
         introSoundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    /// <summary>
+    /// The gameplay background music
+    /// </summary>
     public void StartMainSoundtrack()
     {
         stealthSoundtrack.start();
@@ -72,6 +78,9 @@ public class AudioManager : MonoBehaviour {
         stealthSoundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    /// <summary>
+    /// Footsteps have a start and stop method as the sound effect loops
+    /// </summary>
     public void StartFootsteps()
     {
         footsteps.start();
@@ -82,26 +91,42 @@ public class AudioManager : MonoBehaviour {
         footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    /// <summary>
+    /// On key collection
+    /// </summary>
     public void PlayKeyCollectSound()
     {
         PlayOneShot(KeyCollect);
     }
 
+    /// <summary>
+    /// Upon putting on / removing the cardboard box
+    /// </summary>
     public void PlayCardboardBoxSound()
     {
         PlayOneShot(CardboardBox);
     }
 
+    /// <summary>
+    /// When a key is used on the door.
+    /// NOT the door open sound.
+    /// </summary>
     public void PlayDoorUnlockSound()
     {
         PlayOneShot(DoorUnlock);
     }
 
+    /// <summary>
+    /// On player being detected by the enemy
+    /// </summary>
     public void PlayDetectedSound()
     {
         PlayOneShot(Detected);
     }
 
+    /// <summary>
+    /// Game over sound, after having been spotted.
+    /// </summary>
     public void PlayGameOverSound()
     {
         PlayOneShot(GameOver);
