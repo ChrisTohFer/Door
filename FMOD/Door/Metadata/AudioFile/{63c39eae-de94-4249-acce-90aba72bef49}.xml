@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{63c39eae-de94-4249-acce-90aba72bef49}">
+        <property name="assetPath">
+            <value>Intro Sequence.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>27.779863945578231</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{5b4302ff-6a32-4701-aa40-e80d171c758e}</destination>
+        </relationship>
+    </object>
+</objects>
