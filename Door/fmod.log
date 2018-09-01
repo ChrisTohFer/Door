@@ -24,9 +24,27 @@
 [LOG] SystemI::createSound                     : filename = ..\FMOD\Door\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 000000002CC57808 : node = 00000000389EE000
+[LOG] SystemI::createSound                     : setdata soundi = 0000000054359E08 : node = 00000000389EF7A0
 [LOG] SystemI::createSound                     : add node to async list : head = 0000000041156EF8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002CC57808
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000054359E08
+[LOG] SystemI::createSoundInternal             :     Create name='..\FMOD\Door\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1527936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 14880
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000389EF8B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Stealth', format=2, channels=2, frequency=48000, lengthbytes=1180224, lengthpcm=4253537, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.804871.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000054359E08
+[LOG] SoundI::getSubSound                      : sound 0000000054359E08.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = ..\FMOD\Door\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000054359FB8 : node = 00000000389EE000
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000041156EF8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000054359FB8
 [LOG] SystemI::createSoundInternal             :     Create name='..\FMOD\Door\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1527936
@@ -37,12 +55,14 @@
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Stealth', format=2, channels=2, frequency=48000, lengthbytes=1180224, lengthpcm=4253537, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.804871.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002CC57808
-[LOG] SoundI::getSubSound                      : sound 000000002CC57808.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Stealth (000000002CC57808)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000054359FB8
+[LOG] SoundI::getSubSound                      : sound 0000000054359FB8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Stealth (0000000054359E08)
 [LOG] SoundI::release                          :     Stealth (000000002C6228C8)
-[LOG] SoundI::release                          :     Stealth (0000000050FB8738)
+[LOG] SoundI::release                          :     Stealth (000000005C7B8138)
+[LOG] SoundI::release                          : Stealth (0000000054359FB8)
+[LOG] SoundI::release                          :     Stealth (000000006533B658)
+[LOG] SoundI::release                          :     Stealth (000000005C7B87F8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
