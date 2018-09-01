@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Class moves the player and makes them face their movement direction
+
 public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
@@ -14,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
         rb.velocity = MaxSpeed * new Vector3(x, 0f, z);
 
-        if (rb.velocity.magnitude > 0f)
+        if (rb.velocity.magnitude > MaxSpeed * 0.05f)
         {
             transform.LookAt(transform.position + rb.velocity);
             transform.rotation = transform.rotation * Quaternion.Euler(-90f, 90f, 0f);
