@@ -336,7 +336,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!108 &108018921224935206
 Light:
@@ -395,7 +395,7 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1167450962712030}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6c997820e3f6d2141aa9ddacf59a119d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.1534468
