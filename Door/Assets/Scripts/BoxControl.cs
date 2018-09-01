@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoxControl : MonoBehaviour {
 
@@ -8,10 +9,12 @@ public class BoxControl : MonoBehaviour {
 
     public float BoxTime = 10f;
     private float _timer;
+    public Text text;
 
     private void Awake()
     {
         _timer = BoxTime;
+        text.text = "Box Time: " + Mathf.RoundToInt(_timer);
     }
 
     private void FixedUpdate()
@@ -20,6 +23,7 @@ public class BoxControl : MonoBehaviour {
         {
             Controller.SetBool("SpaceDown", true);
             _timer -= Time.fixedDeltaTime;
+            text.text = "Box Time: " + Mathf.RoundToInt(_timer);
         }
         else
         {
@@ -30,5 +34,6 @@ public class BoxControl : MonoBehaviour {
     public void RefreshTime()
     {
         _timer = BoxTime;
+        text.text = "Box Time: " + Mathf.RoundToInt(_timer);
     }
 }
