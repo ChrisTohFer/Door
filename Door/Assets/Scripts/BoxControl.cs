@@ -19,7 +19,7 @@ public class BoxControl : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.Space) && _timer > 0f)
+        if(Input.GetKey(KeyCode.Space) && _timer > 0f && !GameControl.PlayerCaught)
         {
             Controller.SetBool("SpaceDown", true);
             _timer -= Time.fixedDeltaTime;

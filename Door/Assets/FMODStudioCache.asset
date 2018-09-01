@@ -17,10 +17,38 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 114438389955098610}
   - {fileID: 114440069515738932}
+  - {fileID: 114474621648151202}
+  - {fileID: 114355226086643414}
+  - {fileID: 114764663854546818}
+  - {fileID: 114118940630211538}
+  - {fileID: 114027445040422830}
+  - {fileID: 114151985197363628}
   MasterBankRef: {fileID: 114679970920098280}
   StringsBankRef: {fileID: 114170746915390156}
-  stringsBankWriteTime: 636714182376510541
+  stringsBankWriteTime: 636714278569383534
   cacheVersion: 2
+--- !u!114 &114027445040422830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/KeyCollect
+  guid: 71a5a8bf6289144f9dab46bc48d6229e
+  Banks:
+  - {fileID: 114679970920098280}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1790
 --- !u!114 &114090633046930140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +89,50 @@ MonoBehaviour:
   - Name: 
     Value: 784
   Exists: 1
+--- !u!114 &114118940630211538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/GameOver
+  guid: 69bf06dbbc70364aa97347b7015bd834
+  Banks:
+  - {fileID: 114679970920098280}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8500
+--- !u!114 &114151985197363628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DoorUnlock
+  guid: b1097d23a8536349a9e6a1e3792ea814
+  Banks:
+  - {fileID: 114679970920098280}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2500
 --- !u!114 &114170746915390156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,11 +145,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: ..\FMOD\Door\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636714182376510541
+  lastModified: 636714278569383534
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 784
+    Value: 1066
   Exists: 1
 --- !u!114 &114342010945556258
 MonoBehaviour:
@@ -101,6 +173,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 27779
+--- !u!114 &114355226086643414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Footsteps
+  guid: 29c96a540223144ab2ff725fbd0c6d62
+  Banks:
+  - {fileID: 114679970920098280}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1125
 --- !u!114 &114438389955098610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +239,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 27779
+--- !u!114 &114474621648151202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/CardboardBox
+  guid: 2142bb19a9a65f429947265a974104de
+  Banks:
+  - {fileID: 114679970920098280}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 708
 --- !u!114 &114674490707183520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,9 +292,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Christopher Kemp\Documents\MyDocuments\Personal Work\Unity\Door\FMOD\Door\Build\Desktop\Master
     Bank.bank
-  lastModified: 636714182376620247
+  lastModified: 636714278569583006
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1542816
+    Value: 1750624
   Exists: 1
+--- !u!114 &114764663854546818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Detected
+  guid: 4602fb8442366440ac456b95341685b7
+  Banks:
+  - {fileID: 114679970920098280}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1717

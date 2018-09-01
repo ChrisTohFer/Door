@@ -8,8 +8,12 @@ public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
     public float MaxSpeed;
-    public BoxControl BC;
 
+    public BoxControl BC;
+    public UnityEngine.UI.Image RedKey;
+    public UnityEngine.UI.Image BlueKey;
+    public UnityEngine.UI.Image GreenKey;
+    
     private void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal");
@@ -33,6 +37,18 @@ public class PlayerMovement : MonoBehaviour {
         if(other.tag == "BoxPickup")
         {
             BC.RefreshTime();
+        }
+        else if(other.tag == "RedKey")
+        {
+            RedKey.gameObject.SetActive(true);
+        }
+        else if (other.tag == "BlueKey")
+        {
+            BlueKey.gameObject.SetActive(true);
+        }
+        else if (other.tag == "GreenKey")
+        {
+            GreenKey.gameObject.SetActive(true);
         }
     }
 
