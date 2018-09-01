@@ -26,9 +26,15 @@
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [LOG] SystemI::createSound                     : setdata soundi = 000000005C7B7F88 : node = 00000000389EE000
 [LOG] SystemI::createSound                     : add node to async list : head = 000000005CDA4618.  list count = 0
 [LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005C7B7F88
+=======
+[LOG] SystemI::createSound                     : setdata soundi = 000000002FE809F8 : node = 0000000011F883C0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000000787FB8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002FE809F8
+>>>>>>> Stashed changes
 =======
 [LOG] SystemI::createSound                     : setdata soundi = 000000002FE809F8 : node = 0000000011F883C0
 [LOG] SystemI::createSound                     : add node to async list : head = 0000000000787FB8.  list count = 0
@@ -46,7 +52,11 @@
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000389EE118
+=======
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000011F884D8
+>>>>>>> Stashed changes
 =======
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000011F884D8
 >>>>>>> Stashed changes
@@ -58,6 +68,7 @@
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Stealth', format=2, channels=2, frequency=48000, lengthbytes=1180224, lengthpcm=4253537, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.804871.
 [LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005C7B7F88
@@ -88,12 +99,17 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002FE809F8
 [LOG] SoundI::getSubSound                      : sound 000000002FE809F8.  Subsound index 0 / 1
 [LOG] SoundI::release                          : Stealth (000000002FE809F8)
 [LOG] SoundI::release                          :     Stealth (000000002FF465E8)
 [LOG] SoundI::release                          :     Stealth (000000002FE80F08)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
