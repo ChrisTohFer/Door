@@ -5,13 +5,34 @@ using UnityEngine;
 public class GuardDetection : MonoBehaviour {
 
     public GameObject Exclamation;
-    public BoxCollider Col;
     public float SearchLength = 5f;
+    public float SearchAngle = 90f;
 
-    private void OnEnable()
+    private void SearchPlayer()
     {
-        Col.size = new Vector3(SearchLength, 5f, SearchLength);
-        Col.transform.localPosition = new Vector3(0f, 0.1f, Mathf.Sqrt(0.5f * SearchLength * SearchLength));
+        if(GameControl.PlayerCaught)
+        {
+            return;
+        }
+
+        Vector3 gap = GameControl.GC.PlayerObject.transform.position - transform.position;
+        gap = new Vector3(gap.x, 0f, gap.z);
+        
+        if (gap.magnitude < SearchLength && Mathf.Abs(Vector3.SignedAngle(gap, transform.forward, Vector3.up)) < SearchAngle * 0.5f)
+        {
+            Ray ray = new Ray(transform.position, gap);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, SearchLength);
+
+            if(hit.collider.tag == "Player")
+            {
+                PlayerCaught();
+            }
+        }
+    }
+    private void FixedUpdate()
+    {
+        SearchPlayer();
     }
 
     private void PlayerCaught()
@@ -19,27 +40,5 @@ public class GuardDetection : MonoBehaviour {
         Debug.Log("Caught");
         GameControl.PlayerCaught = true;
         Exclamation.SetActive(true);
-    }
-    private void OnPlayerDetected(Collider other)
-    {
-        if ((other.transform.position - transform.parent.position).magnitude < SearchLength)
-        {
-            PlayerCaught();
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player" && !GameControl.PlayerCaught)
-        {
-            OnPlayerDetected(other);
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player" && !GameControl.PlayerCaught)
-        {
-            OnPlayerDetected(other);
-        }
     }
 }
