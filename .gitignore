@@ -22,3 +22,5 @@ sysinfo.txt
 
 # FMOD stuff
 FMOD/Door/.*
+
+Door/fmod\.log
