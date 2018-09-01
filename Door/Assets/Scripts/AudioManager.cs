@@ -15,12 +15,27 @@ public class AudioManager : MonoBehaviour {
     private EventInstance IntroSoundtrack;
     private EventInstance StealthSoundtrack;
 
+    public static AudioManager manager;
+
     // Use this for initialization
     void Start() {
-        IntroSoundtrack = CreateFMODEventInstance(IntroSoundtrackRef);
-        StealthSoundtrack = CreateFMODEventInstance(StealthSoundtrackRef);
+        if(manager == null)
+        {
+            manager = this;
+            DontDestroyOnLoad(gameObject);
 
-        StealthSoundtrack.start();
+            IntroSoundtrack = CreateFMODEventInstance(IntroSoundtrackRef);
+            StealthSoundtrack = CreateFMODEventInstance(StealthSoundtrackRef);
+
+            StealthSoundtrack.start();
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        
     }
 
     private EventInstance CreateFMODEventInstance(string eventRef)
