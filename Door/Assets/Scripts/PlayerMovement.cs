@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
     public float MaxSpeed;
+    public BoxControl BC;
 
     private void FixedUpdate()
     {
@@ -26,4 +27,13 @@ public class PlayerMovement : MonoBehaviour {
             //transform.rotation = transform.rotation * Quaternion.Euler(-90f, 90f, 0f);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "BoxPickup")
+        {
+            BC.RefreshTime();
+        }
+    }
+
 }
