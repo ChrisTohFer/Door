@@ -61,3 +61,4 @@ MonoBehaviour:
   GameOver: event:/SFX/GameOver
   Countdown: event:/SFX/Countdown
   SecretDoorOpening: event:/SFX/SecretDoorOpening
+  GuardCollide: event:/SFX/GuardCollide
