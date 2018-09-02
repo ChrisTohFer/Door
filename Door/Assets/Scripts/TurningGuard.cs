@@ -95,7 +95,7 @@ public class TurningGuard : MonoBehaviour
         {
             if (trans.rotation.eulerAngles.y < current.TargetAngle)
             {
-                angle = current.TargetAngle - trans.rotation.eulerAngles.y + 360f;
+                angle = current.TargetAngle - trans.rotation.eulerAngles.y - 360f;
             }
             else
             {
