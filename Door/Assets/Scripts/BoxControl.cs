@@ -30,6 +30,7 @@ public class BoxControl : MonoBehaviour {
 
             var timerRoundedToInt = Mathf.RoundToInt(_timer);
             text.text = "Box Time: " + timerRoundedToInt;
+            text.gameObject.SetActive(true);
 
             if (timerRoundedToInt <= _nextCountdownSoundInterval && timerRoundedToInt >= 0)
             {
