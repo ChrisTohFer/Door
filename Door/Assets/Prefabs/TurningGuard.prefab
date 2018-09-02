@@ -176,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156479818418476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.405663, y: 0.5, z: -7.7776785}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4837464413259432}
@@ -203,7 +203,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663872368531760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.155663, y: 0, z: -4.242322}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4399607140629652}
@@ -460,6 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 54920213434720372}
   trans: {fileID: 4837464413259432}
+  KeepCounting: 0
   CurrentTurn: 0
   TurnList:
   - TargetAngle: 90
@@ -478,6 +479,7 @@ MonoBehaviour:
     TurnSpeed: 6
     PreWait: 1
     Clockwise: 0
+  _timer: 0
 --- !u!136 &136305518967652144
 CapsuleCollider:
   m_ObjectHideFlags: 1

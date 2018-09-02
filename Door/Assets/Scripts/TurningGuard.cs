@@ -15,15 +15,17 @@ public class TurningGuard : MonoBehaviour
 
     public Rigidbody rb;
     public Transform trans;
+    public bool KeepCounting = false;
     public int CurrentTurn;
     public Turn[] TurnList;
     
-    private float _timer;
+    public float _timer = 0f;
     private bool _spunOut = false;
 
     private void OnEnable()
     {
-        _timer = TurnList[CurrentTurn].PreWait;
+        if (_timer == 0f)
+            _timer = TurnList[CurrentTurn].PreWait;
     }
     private void FixedUpdate()
     {
@@ -35,6 +37,10 @@ public class TurningGuard : MonoBehaviour
             }
             else
             {
+                if(KeepCounting)
+                {
+                    _timer -= Time.fixedDeltaTime;
+                }
                 Turn current = TurnList[CurrentTurn];
                 float angle = AngularDifference();
                 float direction;
@@ -52,7 +58,7 @@ public class TurningGuard : MonoBehaviour
                     trans.eulerAngles = new Vector3(0f, current.TargetAngle, 0f);
                     rb.angularVelocity = Vector3.zero;
                     Increment();
-                    _timer = TurnList[CurrentTurn].PreWait;
+                    _timer += TurnList[CurrentTurn].PreWait;
                 }
                 else
                 {
@@ -89,7 +95,7 @@ public class TurningGuard : MonoBehaviour
         {
             if (trans.rotation.eulerAngles.y < current.TargetAngle)
             {
-                angle = current.TargetAngle - trans.rotation.eulerAngles.y + 360f;
+                angle = current.TargetAngle - trans.rotation.eulerAngles.y - 360f;
             }
             else
             {

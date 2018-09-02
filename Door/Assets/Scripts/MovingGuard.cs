@@ -8,20 +8,24 @@ public class MovingGuard : MonoBehaviour {
     public Transform WayPoint1, WayPoint2;
     public bool Returning = false;
     public bool Clockwise = true;
+    public bool KeepCounting = false;
     public float WaitTime = 4f;
     public float Speed = 5f;
     public float TurnSpeed = 1f;
 
-    private bool _waiting = false;
+    public bool _waiting = false;
     private bool _rotating = true;
 
     private bool _spunOut = false;
 
-    private float _timer;
+    public float _timer;
 
     private void OnEnable()
     {
-        _timer = WaitTime;
+        if(_timer == 0)
+        {
+            _timer = WaitTime;
+        }
     }
 
     private void FixedUpdate()
@@ -39,6 +43,11 @@ public class MovingGuard : MonoBehaviour {
             else
             {
                 MoveToDestination();
+            }
+
+            if(KeepCounting && !_waiting)
+            {
+                _timer -= Time.fixedDeltaTime;
             }
         }
     }
