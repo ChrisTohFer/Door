@@ -180,6 +180,11 @@ public class AudioManager : MonoBehaviour {
         PlayOneShot(GuardCollide);
     }
 
+    public void PlayGuardCollideSound(Vector3 position)
+    {
+        RuntimeManager.PlayOneShot(GuardCollide, position);
+    }
+
     private void PlayOneShot(string eventRef)
     {
         RuntimeManager.PlayOneShot(eventRef);
