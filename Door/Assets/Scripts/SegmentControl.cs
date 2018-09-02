@@ -18,8 +18,7 @@ public class SegmentControl : MonoBehaviour {
             float y = Mathf.Round(PlayerObject.transform.position.z / YPeriod) * YPeriod;
 
             CamHolder.position = new Vector3(x, 0f, y);
-
-            Debug.Log(x + ", " + y);
+            
         }
         
     }

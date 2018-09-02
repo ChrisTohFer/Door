@@ -32,6 +32,8 @@ public class DoorScript : MonoBehaviour {
             DoorAnimation.SetBool("DoorOpened", true);
             GameControl.GC.PlayerObject.transform.position = new Vector3(1.0f, -0.3f, -0.5f) + transform.position;
             GameControl.GC.PlayerObject.transform.rotation = Quaternion.Euler(0f, -45f, 0f);
+            GameControl.GC.PlayerObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            AudioManager.manager.Invoke("PlaySecretDoorOpeningSound", 1f);
         }
     }
 
