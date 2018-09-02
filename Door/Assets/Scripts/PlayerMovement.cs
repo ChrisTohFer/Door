@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour {
         if(other.tag == "BoxPickup")
         {
             BC.RefreshTime();
+            AudioManager.manager.PlayCardboardBoxSound();
         }
         else if(other.tag == "RedKey")
         {
