@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{991d3adf-651f-4c5f-a622-da6a7eadd3fe}">
+        <property name="assetPath">
+            <value>GuardCollide01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{5b4302ff-6a32-4701-aa40-e80d171c758e}</destination>
+        </relationship>
+    </object>
+</objects>

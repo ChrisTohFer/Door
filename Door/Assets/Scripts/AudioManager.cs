@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour {
     [EventRef] public string GameOver;
     [EventRef] public string Countdown;
     [EventRef] public string SecretDoorOpening;
+    [EventRef] public string GuardCollide;
 
 
     private EventInstance introSoundtrack;
@@ -163,9 +164,20 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// When the secret door is opened after obtaining and using all keys.
+    /// </summary>
     public void PlaySecretDoorOpeningSound()
     {
         PlayOneShot(SecretDoorOpening);
+    }
+
+    /// <summary>
+    /// Sound that plays when player collides with a guard, sending them flying.
+    /// </summary>
+    public void PlayGuardCollideSound()
+    {
+        PlayOneShot(GuardCollide);
     }
 
     private void PlayOneShot(string eventRef)
