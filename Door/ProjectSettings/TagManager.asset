@@ -12,6 +12,7 @@ TagManager:
   - RedKey
   - GreenKey
   - BlueKey
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{cfb7824d-860d-4824-afef-9b510e586475}">
         <property name="name">
-            <value>GuardCollide</value>
+            <value>GuardCollideOld</value>
         </property>
         <property name="outputFormat">
             <value>1</value>
