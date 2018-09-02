@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour {
     [EventRef] public string Detected;
     [EventRef] public string GameOver;
     [EventRef] public string Countdown;
+    [EventRef] public string SecretDoorOpening;
 
 
     private EventInstance introSoundtrack;
@@ -160,6 +161,11 @@ public class AudioManager : MonoBehaviour {
             instance.start();
             instance.release();
         }
+    }
+
+    public void PlaySecretDoorOpeningSound()
+    {
+        PlayOneShot(SecretDoorOpening);
     }
 
     private void PlayOneShot(string eventRef)
