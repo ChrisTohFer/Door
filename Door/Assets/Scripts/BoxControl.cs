@@ -11,6 +11,8 @@ public class BoxControl : MonoBehaviour {
     private float _timer;
     public Text text;
 
+    private int _nextCountdownSoundInterval = 3;
+
     private void Awake()
     {
         _timer = BoxTime;
@@ -25,7 +27,15 @@ public class BoxControl : MonoBehaviour {
         {
             Controller.SetBool("SpaceDown", true);
             _timer -= Time.fixedDeltaTime;
-            text.text = "Box Time: " + Mathf.RoundToInt(_timer);
+
+            var timerRoundedToInt = Mathf.RoundToInt(_timer);
+            text.text = "Box Time: " + timerRoundedToInt;
+
+            if (timerRoundedToInt <= _nextCountdownSoundInterval && timerRoundedToInt >= 0)
+            {
+                AudioManager.manager.PlayCountdownSound(timerRoundedToInt);
+                _nextCountdownSoundInterval -= 1;
+            }
         }
         else
         {
@@ -37,5 +47,6 @@ public class BoxControl : MonoBehaviour {
     {
         _timer = BoxTime;
         text.text = "Box Time: " + Mathf.RoundToInt(_timer);
+        _nextCountdownSoundInterval = 3;
     }
 }
