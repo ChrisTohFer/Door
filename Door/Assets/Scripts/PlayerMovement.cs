@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour {
             _spunOut++;
             GuardSpinCounter.text = "Guards spun out: " + _spunOut;
             GuardSpinCounter.gameObject.SetActive(true);
+
+            AudioManager.manager.PlayGuardCollideSound();
         }
     }
     private void OnTriggerEnter(Collider other)
