@@ -30,6 +30,15 @@ public class GuardDetection : MonoBehaviour {
             }
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Guard")
+        {
+            // AudioManager.manager.PlayGuardCollideSound(collision.transform.position);
+        }
+    }
+
     private void FixedUpdate()
     {
         SearchPlayer();
