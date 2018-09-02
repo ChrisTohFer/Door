@@ -60,3 +60,4 @@ MonoBehaviour:
   Detected: event:/SFX/Detected
   GameOver: event:/SFX/GameOver
   Countdown: event:/SFX/Countdown
+  SecretDoorOpening: event:/SFX/SecretDoorOpening
