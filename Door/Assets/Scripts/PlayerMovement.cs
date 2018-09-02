@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        if (GameControl.PlayerCaught)
+        if (GameControl.PlayerCaught || GameControl.IntroPlaying || GameControl.GameWon)
         {
             return;
         }
@@ -63,16 +63,19 @@ public class PlayerMovement : MonoBehaviour {
         {
             AudioManager.manager.PlayKeyCollectSound();
             RedKey.gameObject.SetActive(true);
+            GameControl.GC.PickupKey();
         }
         else if (other.tag == "BlueKey")
         {
             AudioManager.manager.PlayKeyCollectSound();
             BlueKey.gameObject.SetActive(true);
+            GameControl.GC.PickupKey();
         }
         else if (other.tag == "GreenKey")
         {
             AudioManager.manager.PlayKeyCollectSound();
             GreenKey.gameObject.SetActive(true);
+            GameControl.GC.PickupKey();
         }
     }
 

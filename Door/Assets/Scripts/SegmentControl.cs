@@ -9,11 +9,18 @@ public class SegmentControl : MonoBehaviour {
     public float XPeriod = 20f;
     public float YPeriod = 10f;
 
-    private void Update()
+    private void LateUpdate()
     {
-        float x = Mathf.Round(PlayerObject.transform.position.x / XPeriod) * XPeriod;
-        float y = Mathf.Round(PlayerObject.transform.position.z / YPeriod) * YPeriod;
+        if(!GameControl.IntroPlaying && !GameControl.GameWon)
+        {
+            
+            float x = Mathf.Round(PlayerObject.transform.position.x / XPeriod) * XPeriod;
+            float y = Mathf.Round(PlayerObject.transform.position.z / YPeriod) * YPeriod;
 
-        CamHolder.position = new Vector3(x, 0f, y);
+            CamHolder.position = new Vector3(x, 0f, y);
+
+            Debug.Log(x + ", " + y);
+        }
+        
     }
 }
