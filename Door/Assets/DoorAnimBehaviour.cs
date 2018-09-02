@@ -9,7 +9,8 @@ public class DoorAnimBehaviour : StateMachineBehaviour {
     {
         if(stateInfo.IsName("Final"))
         {
-
+            AudioManager.manager.StopMainSoundtrack();
+            AudioManager.manager.PlayGameOverSound();
         }
     }
 
