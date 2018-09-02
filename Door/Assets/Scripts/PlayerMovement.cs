@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour {
     public UnityEngine.UI.Image RedKey;
     public UnityEngine.UI.Image BlueKey;
     public UnityEngine.UI.Image GreenKey;
+
+    public UnityEngine.UI.Text GuardSpinCounter;
+    private int _spunOut = 0;
     
     private void FixedUpdate()
     {
@@ -41,6 +44,15 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Guard")
+        {
+            _spunOut++;
+            GuardSpinCounter.text = "Guards spun out: " + _spunOut;
+            GuardSpinCounter.gameObject.SetActive(true);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "BoxPickup")
