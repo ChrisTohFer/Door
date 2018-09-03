@@ -11,6 +11,7 @@ public class DoorAnimBehaviour : StateMachineBehaviour {
         {
             AudioManager.manager.StopMainSoundtrack();
             AudioManager.manager.PlayGameOverSound();
+            AudioManager.manager.StopFootsteps();
         }
     }
 
