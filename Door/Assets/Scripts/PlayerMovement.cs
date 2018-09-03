@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         rb.velocity = MaxSpeed * new Vector3(x, 0f, z);
 
-        if(rb.velocity.magnitude > MaxSpeed * 0.1f)
+        if(rb.velocity.magnitude > MaxSpeed * 0.4f)
         {
             AudioManager.manager.StartFootsteps();
         }
