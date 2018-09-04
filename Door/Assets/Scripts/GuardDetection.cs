@@ -8,6 +8,13 @@ public class GuardDetection : MonoBehaviour {
     public float SearchLength = 5f;
     public float SearchAngle = 90f;
 
+    private MeshRenderer _renderer;
+
+    private void OnEnable()
+    {
+        _renderer = GetComponentInChildren<MeshRenderer>();
+    }
+
     private void SearchPlayer()
     {
         if(GameControl.PlayerCaught)
@@ -35,7 +42,10 @@ public class GuardDetection : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Guard")
         {
-            // AudioManager.manager.PlayGuardCollideSound(collision.transform.position);
+            if (_renderer.isVisible)
+            {
+                AudioManager.manager.PlayGuardCollideSound(collision.transform.position);
+            }
         }
     }
 
@@ -46,7 +56,6 @@ public class GuardDetection : MonoBehaviour {
 
     private void PlayerCaught()
     {
-        Debug.Log("Caught");
         GameControl.PlayerCaught = true;
         GameControl.GC.OnDeath();
         Exclamation.SetActive(true);

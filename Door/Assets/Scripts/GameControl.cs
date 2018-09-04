@@ -24,7 +24,6 @@ public class GameControl : MonoBehaviour {
         {
             KeysHeld = true;
         }
-        Debug.Log(Keys);
     }
     private void Awake()
     {
