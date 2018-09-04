@@ -70,11 +70,11 @@
         <relationship name="modules">
             <destination>{9c4ca0ab-7c0e-4275-beb1-fb3a5c08a7e5}</destination>
         </relationship>
-        <relationship name="markers">
-            <destination>{b6500d07-7f96-4cc9-a979-78c3f32e64a5}</destination>
-        </relationship>
     </object>
     <object class="EventMixerMaster" id="{082700b1-4c6d-4981-b6d8-6253d625fd95}">
+        <relationship name="modulators">
+            <destination>{d8e17c8d-8b22-409e-b7d2-1f4b3b33f465}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{e9370a14-01c4-453d-82bf-bc9cfc3225ab}</destination>
         </relationship>
@@ -110,19 +110,13 @@
             <destination>{082700b1-4c6d-4981-b6d8-6253d625fd95}</destination>
         </relationship>
     </object>
-    <object class="LoopRegion" id="{b6500d07-7f96-4cc9-a979-78c3f32e64a5}">
-        <property name="position">
-            <value>0</value>
+    <object class="RandomizerModulator" id="{d8e17c8d-8b22-409e-b7d2-1f4b3b33f465}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
         </property>
-        <property name="length">
-            <value>1</value>
+        <property name="amount">
+            <value>6.25</value>
         </property>
-        <relationship name="timeline">
-            <destination>{36ab83e8-045f-48e1-87fd-f5d5c6065aef}</destination>
-        </relationship>
-        <relationship name="markerTrack">
-            <destination>{8d23926e-d944-4397-987d-40265311e36c}</destination>
-        </relationship>
     </object>
     <object class="MixerBusEffectChain" id="{e9370a14-01c4-453d-82bf-bc9cfc3225ab}">
         <relationship name="effects">
@@ -141,7 +135,7 @@
     <object class="MixerBusFader" id="{fc96dd22-a6c6-4c2b-9579-c20fea8e8527}"/>
     <object class="SpatialiserEffect" id="{93dea0f9-7028-49ae-b492-9904db93d2e0}">
         <property name="maximumDistance">
-            <value>3.60000014</value>
+            <value>50</value>
         </property>
     </object>
     <object class="MixerBusFader" id="{991217f9-591c-42d6-8ab3-1526f8247f39}"/>
