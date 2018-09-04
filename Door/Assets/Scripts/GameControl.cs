@@ -24,7 +24,6 @@ public class GameControl : MonoBehaviour {
         {
             KeysHeld = true;
         }
-        Debug.Log(Keys);
     }
     private void Awake()
     {
@@ -56,6 +55,8 @@ public class GameControl : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !IntroPlaying)
             ReloadScene();
+        if (Input.GetKeyDown(KeyCode.Backspace))
+            Application.Quit();
     }
     private void ReloadScene()
     {
