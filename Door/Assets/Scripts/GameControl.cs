@@ -51,7 +51,7 @@ public class GameControl : MonoBehaviour {
             AudioManager.manager.StartMainSoundtrack();
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !IntroPlaying)
             ReloadScene();
